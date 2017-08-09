@@ -1,0 +1,33 @@
+name: azure.servicebus.connectionstring.parse
+description: parses an azure servicebus connectionstring
+inputs:
+  connectionString:
+    string:
+      constraints: { minLength: 1 }
+      description: azure servicebus connection string to parse
+outputs:
+  endpoint:
+    string:
+      constraints: { format: uri, minLength: 1}
+      description: the servicebus endpoint
+  sharedAccessKeyName:
+    string:
+      constraints: { minLength: 1}
+      description: the servicebus shared access key name
+  sharedAccessKey:
+    string:
+      constraints: { minLength: 1}
+      description: the servicebus shared access key
+      isSecret: true
+version: 1.0.0
+run:
+  container:
+    image: { ref: 'node:8.1.0-alpine' }
+    cmd: [node, /index.js]
+    files: { /index.js }
+    stdOut:
+      endpoint=: endpoint
+      sharedAccessKeyName=: sharedAccessKeyName
+      sharedAccessKey=: sharedAccessKey
+    envVars:
+      connectionString:
