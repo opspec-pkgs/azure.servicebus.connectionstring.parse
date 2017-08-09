@@ -9,15 +9,15 @@ outputs:
   endpoint:
     string:
       constraints: { format: uri, minLength: 1}
-      description: the servicebus endpoint
+      description: parsed endpoint
   sharedAccessKeyName:
     string:
       constraints: { minLength: 1}
-      description: the servicebus shared access key name
+      description: parsed shared access key name
   sharedAccessKey:
     string:
       constraints: { minLength: 1}
-      description: the servicebus shared access key
+      description: parsed shared access key
       isSecret: true
 version: 1.0.0
 run:
