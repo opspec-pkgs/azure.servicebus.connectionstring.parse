@@ -28,9 +28,10 @@ op:
   pkg: { ref: github.com/opspec-pkgs/azure.servicebus.connectionstring.parse#VERSION }
   inputs: 
     connectionString:
-    secondsValid:
   outputs:
-    sasToken:
+    endpoint:
+    sharedAccessKeyName:
+    sharedAccessKey:
 ```
 
 # Support
