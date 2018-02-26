@@ -5,6 +5,7 @@ inputs:
     string:
       constraints: { minLength: 1 }
       description: azure servicebus connection string to parse
+icon: /icon.svg
 outputs:
   endpoint:
     string:
@@ -19,15 +20,15 @@ outputs:
       constraints: { minLength: 1}
       description: parsed shared access key
       isSecret: true
-version: 1.0.0
+version: 1.0.1
 run:
   container:
-    image: { ref: 'node:8.1.0-alpine' }
-    cmd: [node, /index.js]
-    files: { /index.js }
-    stdOut:
-      endpoint=: endpoint
-      sharedAccessKeyName=: sharedAccessKeyName
-      sharedAccessKey=: sharedAccessKey
+    image: { ref: 'node:9.5.0-alpine' }
+    cmd: [node, /cmd.js]
+    files:
+      /cmd.js:
+      /endpoint: $(endpoint)
+      /sharedAccessKeyName: $(sharedAccessKeyName)
+      /sharedAccessKey: $(sharedAccessKey)
     envVars:
       connectionString:
