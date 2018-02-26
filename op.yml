@@ -1,4 +1,4 @@
-name: azure.servicebus.connectionstring.parse
+name: github.com/opspec-pkgs/azure.servicebus.connectionstring.parse
 description: parses an azure servicebus connectionstring
 inputs:
   connectionString:

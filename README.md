@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.orgicebus.connectionstring.parse.svg?branch=master)](https://travis-ci.orgicebus.connectionstring.parse)
+[![Build Status](https://travis-ci.org/opspec-pkgs/azure.servicebus.connectionstring.parse.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.servicebus.connectionstring.parse)
 
 <img src="icon.svg" alt="icon" height="100px">
 
@@ -15,20 +15,20 @@ this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opsp
 ## Install
 
 ```shell
-opctl pkg install azure.servicebus.connectionstring.parse#1.0.1
+opctl pkg install github.com/opspec-pkgs/azure.servicebus.connectionstring.parse#1.0.1
 ```
 
 ## Run
 
 ```
-opctl run azure.servicebus.connectionstring.parse#1.0.1
+opctl run github.com/opspec-pkgs/azure.servicebus.connectionstring.parse#1.0.1
 ```
 
 ## Compose
 
 ```yaml
 op:
-pkg: { ref: azure.servicebus.connectionstring.parse#1.0.1 }
+pkg: { ref: github.com/opspec-pkgs/azure.servicebus.connectionstring.parse#1.0.1 }
 inputs:
     connectionString:
 outputs:
@@ -42,7 +42,7 @@ outputs:
 join us on
 [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
 or
-[open an issue](https://azure.servicebus.connectionstring.parse/issues)
+[open an issue](https://github.com/opspec-pkgs/azure.servicebus.connectionstring.parse/issues)
 
 # Releases
 
