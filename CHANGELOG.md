@@ -7,7 +7,7 @@ All notable changes will be documented in this file in accordance with
 
 ## \[1.0.1] - 2018-02-25
 
-## Changed
+### Changed
 
 - endpoint, sharedAccessKeyName, & sharedAccessKey no longer written to stdOut
 
